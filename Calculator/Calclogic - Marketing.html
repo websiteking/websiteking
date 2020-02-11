@@ -53,6 +53,14 @@ setInterval(function() {
 		document.getElementById("socialads-totaal").style.display = "none";
 	}
 
+	marketingtotaal =
+	parseFloat(document.getElementById("seo-prijs").innerHTML) +
+	parseFloat(document.getElementById("googleads-prijs").innerHTML) +
+	parseFloat(document.getElementById("brochures-prijs").innerHTML) +
+	parseFloat(document.getElementById("influencermarketing-prijs").innerHTML) +
+	parseFloat(document.getElementById("socialmediaads-prijs").innerHTML);
+	
+	document.getElementById("marketing-totaal").innerHTML = marketingtotaal;
 
 	}, 1000);
 
