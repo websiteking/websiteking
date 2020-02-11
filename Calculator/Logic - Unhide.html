@@ -1,5 +1,5 @@
 <script>
-  
+
 // Checkt welke diensten checkboxes er zijn aangevinkt
 // en laat het bijbehorende blok zien
 
@@ -55,21 +55,22 @@ document.getElementById('opzoek').onclick = function () {
   if (document.getElementById("check-opzoek-website").checked == true ||
       document.getElementById("check-opzoek-branding").checked == true ||
       document.getElementById("check-opzoek-marketing").checked == true){
-  document.getElementById("calc-top").style.display = "none";
-  document.getElementById("calc-bottom").style.display = "flex";
   document.getElementById("totaal-empty").style.display = "none";
+  }
+   else {
+     document.getElementById("totaal-empty").style.display = "block";
+  }
+
+    if (document.getElementById("check-opzoek-website").checked == true ||
+      document.getElementById("check-opzoek-branding").checked == true ||
+      document.getElementById("check-opzoek-foto-video").checked == true ||
+      document.getElementById("check-opzoek-marketing").checked == true){
+  document.getElementById("calc-top").style.display = "none";
+    document.getElementById("calc-bottom").style.display = "flex";
   }
    else {
      document.getElementById("calc-top").style.display = "flex";
      document.getElementById("calc-bottom").style.display = "none";
-     document.getElementById("totaal-empty").style.display = "block";
-  }
-
-  if (document.getElementById("check-opzoek-foto-video").checked == true){
-  document.getElementById("calc-top").style.display = "none";
-  }
-  else{
-  document.getElementById("calc-top").style.display = "flex";
   }
 }
 
