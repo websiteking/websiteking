@@ -1,0 +1,143 @@
+<script>
+
+//Zorgt ervoor dat wat gehide moet worden automatisch
+//gehide worden zodra de pagina laadt
+
+window.onload=function(){
+document.getElementById("block-website").style.display = "none";
+document.getElementById("block-branding").style.display = "none";
+document.getElementById("block-foto-video").style.display = "none";
+document.getElementById("block-marketing").style.display = "none";
+document.getElementById("calc-bottom").style.display = "none";
+document.getElementById("cms-block").style.display = "none";
+document.getElementById("foto-block").style.display = "none";
+document.getElementById("video-block").style.display = "none";
+document.getElementById("animatie-block").style.display = "none";
+document.getElementById("totaal-website").style.display = "none";
+document.getElementById("totaal-branding").style.display = "none";
+document.getElementById("totaal-fotos").style.display = "none";
+document.getElementById("totaal-video").style.display = "none";
+document.getElementById("totaal-animatievideo").style.display = "none";
+document.getElementById("totaal-marketing").style.display = "none";
+};
+
+// Checkt welke diensten checkboxes er zijn aangevinkt
+// en laat het bijbehorende blok zien
+
+document.getElementById('opzoek').onclick = function () {
+  if (document.getElementById("check-opzoek-website").checked == true){
+    document.getElementById("block-website").style.display = "block";
+
+    document.getElementById("totaal-website").style.display = "block";
+  }
+  else {
+     document.getElementById("block-website").style.display = "none";
+
+     document.getElementById("totaal-website").style.display = "none";
+  }
+
+   if (document.getElementById("check-opzoek-branding").checked == true){
+    document.getElementById("block-branding").style.display = "block";
+
+    document.getElementById("totaal-branding").style.display = "block";
+  }
+  else {
+     document.getElementById("block-branding").style.display = "none";
+
+     document.getElementById("totaal-branding").style.display = "none";
+  }
+
+    if (document.getElementById("check-opzoek-foto-video").checked == true){
+    document.getElementById("block-foto-video").style.display = "block";
+    //totalen van foto/video worden geshowed en hide bij de foto/video code
+  }
+  else {
+     document.getElementById("block-foto-video").style.display = "none";
+
+     document.getElementById("totaal-fotos").style.display = "none";
+     document.getElementById("totaal-video").style.display = "none";
+     document.getElementById("totaal-animatievideo").style.display = "none";
+     //totalen van foto/video worden geshowed en hide bij de foto/video code
+  }
+
+    if (document.getElementById("check-opzoek-marketing").checked == true){
+    document.getElementById("block-marketing").style.display = "block";
+
+    document.getElementById("totaal-marketing").style.display = "block";
+  }
+  else {
+     document.getElementById("block-marketing").style.display = "none";
+
+     document.getElementById("totaal-marketing").style.display = "none";
+  }
+  // Checkt of 1 van de 4 diensten checkboxes zijn aangevinkt
+  // en laat het onderste 'vul de rest' block zien
+
+  if (document.getElementById("check-opzoek-website").checked == true ||
+      document.getElementById("check-opzoek-branding").checked == true ||
+      document.getElementById("check-opzoek-marketing").checked == true){
+  document.getElementById("calc-top").style.display = "none";
+  document.getElementById("calc-bottom").style.display = "flex";
+  document.getElementById("totaal-empty").style.display = "none";
+  }
+   else {
+     document.getElementById("calc-top").style.display = "flex";
+     document.getElementById("calc-bottom").style.display = "none";
+     document.getElementById("totaal-empty").style.display = "block";
+  }
+
+  if (document.getElementById("check-opzoek-foto-video").checked == true){
+  document.getElementById("calc-top").style.display = "none";
+  }
+  else{
+  document.getElementById("calc-top").style.display = "flex";
+  }
+}
+
+// Checkt of Website CMS optie is aangevinkt
+
+document.getElementById('cms').onclick = function () {
+  if (document.getElementById("cms-ja").checked == true){
+    document.getElementById("cms-block").style.display = "block";
+  }
+  else {
+     document.getElementById("cms-block").style.display = "none";
+  }
+  }
+
+  // Checkt welk Foto/Video diensten er zijn aangevinkt
+
+document.getElementById('foto-video-block').onclick = function () {
+  	if (document.getElementById("foto-video-fotoshoot").checked == true){
+    document.getElementById("foto-block").style.display = "block";
+    document.getElementById("totaal-fotos").style.display = "block";
+    document.getElementById("totaal-empty").style.display = "none";
+  }
+ 	else {
+     document.getElementById("foto-block").style.display = "none";
+     document.getElementById("totaal-fotos").style.display = "none";
+  }
+
+    if (document.getElementById("foto-video-videoshoot").checked == true){
+    document.getElementById("video-block").style.display = "block";
+    document.getElementById("totaal-video").style.display = "block";
+    document.getElementById("totaal-empty").style.display = "none";
+  }
+  else {
+     document.getElementById("video-block").style.display = "none";
+     document.getElementById("totaal-video").style.display = "none";
+  }
+
+    if (document.getElementById("foto-video-animatie").checked == true){
+    document.getElementById("animatie-block").style.display = "block";
+    document.getElementById("totaal-animatievideo").style.display = "block";
+    document.getElementById("totaal-empty").style.display = "none";
+  }
+  else {
+     document.getElementById("animatie-block").style.display = "none";
+     document.getElementById("totaal-animatievideo").style.display = "none";
+  }
+
+  }
+
+</script>
