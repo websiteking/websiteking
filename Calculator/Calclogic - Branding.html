@@ -78,6 +78,18 @@ setInterval(function() {
 	}
 
 
+	brandingtotaal =
+	parseFloat(document.getElementById("completebranding-prijs").innerHTML) +
+	parseFloat(document.getElementById("logo-prijs").innerHTML) +
+	parseFloat(document.getElementById("huisstijl-prijs").innerHTML) +
+	parseFloat(document.getElementById("copywriting-prijs").innerHTML) +
+	parseFloat(document.getElementById("briefpapier-prijs").innerHTML) +
+	parseFloat(document.getElementById("verpakkingen-prijs").innerHTML) +
+	parseFloat(document.getElementById("feedbackronde-prijs-branding").innerHTML);
+
+	document.getElementById("branding-totaal").innerHTML = brandingtotaal;
+
+
 	}, 1000);
 
 </script>
