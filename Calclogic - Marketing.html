@@ -1,0 +1,59 @@
+<script>
+
+setInterval(function() {
+
+	var seoprijs = 500;
+	var googleadsprijs = 500;
+	var brochuresprijs = 600;
+	var influencermarketingprijs = 500;
+	var socialmediaadsprijs = 500;
+
+	if (document.getElementById("marketing-seo").checked == true){
+	 document.getElementById("seo-prijs").innerHTML = seoprijs;
+	 document.getElementById("seo-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("seo-prijs").innerHTML = 0;
+		document.getElementById("seo-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-google-ads").checked == true){
+	 document.getElementById("googleads-prijs").innerHTML = googleadsprijs;
+	 document.getElementById("googleads-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("googleads-prijs").innerHTML = 0;
+		document.getElementById("googleads-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-brochures").checked == true){
+	 document.getElementById("brochures-prijs").innerHTML = brochuresprijs;
+	 document.getElementById("brochures-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("brochures-prijs").innerHTML = 0;
+		document.getElementById("brochures-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-influencer-marketing").checked == true){
+	 document.getElementById("influencermarketing-prijs").innerHTML = influencermarketingprijs;
+	 document.getElementById("influencer-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("influencermarketing-prijs").innerHTML = 0;
+		document.getElementById("influencer-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-social-media-ads").checked == true){
+	 document.getElementById("socialmediaads-prijs").innerHTML = socialmediaadsprijs;
+	 document.getElementById("socialads-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("socialmediaads-prijs").innerHTML = 0;
+		document.getElementById("socialads-totaal").style.display = "none";
+	}
+
+
+	}, 1000);
+
+</script>

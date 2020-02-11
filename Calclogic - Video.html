@@ -1,0 +1,62 @@
+<script>
+
+
+setInterval(function() {
+
+	videomultiplier = document.getElementById("aantal-min-video").value
+
+	var bedrijfsreportage = 0;
+	var productvideo = 0;
+	var promotievideo = 0;
+	var explainervideo = 0;
+
+	var videoscript = 0;
+
+	if (document.getElementById("video-bedrijsreportage").checked == true){
+	 bedrijfsreportage = 1200;
+	 document.getElementById("video-bedrijfsreportage-totaal").style.display = "flex";
+	}
+	else {
+	 bedrijfsreportage = 0;
+	 document.getElementById("video-bedrijfsreportage-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("video-productvideo").checked == true){
+	  productvideo = 1200;
+		 document.getElementById("video-productvideo-totaal").style.display = "flex";
+	}
+	else {
+		productvideo = 0;
+		document.getElementById("video-productvideo-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("video-promotievideo").checked == true){
+	 promotievideo = 1200;
+	  document.getElementById("video-promotievideo-totaal").style.display = "flex";
+	}
+	else {
+	 promotievideo = 0;
+	 document.getElementById("video-promotievideo-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("video-explainervideo").checked == true){
+	 explainervideo = 1200;
+		document.getElementById("video-explainervideo-totaal").style.display = "flex";
+	}
+	else {
+	 explainervideo = 0;
+	 document.getElementById("video-explainervideo-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("video-script-door-websiteking").checked == true){
+	 videoscript = 300;
+	}
+	else {
+	 videoscript = 0;
+	}
+
+	document.getElementById("videos-totaal").innerHTML = ((bedrijfsreportage + productvideo + promotievideo + explainervideo) * videomultiplier) + videoscript;
+
+	}, 1000);
+
+</script>

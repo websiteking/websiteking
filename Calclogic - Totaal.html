@@ -1,0 +1,31 @@
+<script>
+
+
+setInterval(function() {
+
+offertetotaal =
+parseFloat(document.getElementById("webpaginas-prijs").innerHTML) +
+parseFloat(document.getElementById("cms-paginas-prijs").innerHTML) +
+parseFloat(document.getElementById("feedbackronde-prijs").innerHTML) +
+parseFloat(document.getElementById("completebranding-prijs").innerHTML) +
+parseFloat(document.getElementById("logo-prijs").innerHTML) +
+parseFloat(document.getElementById("huisstijl-prijs").innerHTML) +
+parseFloat(document.getElementById("copywriting-prijs").innerHTML) +
+parseFloat(document.getElementById("briefpapier-prijs").innerHTML) +
+parseFloat(document.getElementById("verpakkingen-prijs").innerHTML) +
+parseFloat(document.getElementById("feedbackronde-prijs-branding").innerHTML) +
+parseFloat(document.getElementById("fotos-totaal").innerHTML) +
+parseFloat(document.getElementById("videos-totaal").innerHTML) +
+parseFloat(document.getElementById("animatie-totaal").innerHTML) +
+parseFloat(document.getElementById("seo-prijs").innerHTML) +
+parseFloat(document.getElementById("googleads-prijs").innerHTML) +
+parseFloat(document.getElementById("brochures-prijs").innerHTML) +
+parseFloat(document.getElementById("influencermarketing-prijs").innerHTML) +
+parseFloat(document.getElementById("socialmediaads-prijs").innerHTML);
+
+document.getElementById("offerte-totaalbedrag").innerHTML = offertetotaal;
+document.getElementById("offerte-totaal").value = offertetotaal;
+
+	}, 1000);
+
+</script>

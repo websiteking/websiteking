@@ -1,0 +1,43 @@
+<script>
+
+
+setInterval(function() {
+
+	fotomultiplier = document.getElementById("aantal-fotos").value;
+
+	var locatie = 0;
+	var team = 0;
+	var product = 0;
+
+	if (document.getElementById("foto-locatie").checked == true){
+	 locatie = 500;
+	 document.getElementById("foto-locatie-totaal").style.display = "flex";
+	}
+	else {
+	 locatie = 0;
+	 document.getElementById("foto-locatie-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("foto-team").checked == true){
+	  team = 500;
+		 document.getElementById("foto-team-totaal").style.display = "flex";
+	}
+	else {
+		team = 0;
+		document.getElementById("foto-team-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("foto-product").checked == true){
+	 product = 500;
+	  document.getElementById("foto-product-totaal").style.display = "flex";
+	}
+	else {
+	 product = 0;
+	 document.getElementById("foto-product-totaal").style.display = "none";
+	}
+
+	document.getElementById("fotos-totaal").innerHTML = (locatie + team + product) * fotomultiplier;
+
+	}, 1000);
+
+</script>

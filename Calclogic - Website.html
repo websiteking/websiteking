@@ -1,0 +1,79 @@
+<script>
+
+setInterval(function() {
+
+
+
+//datapullers
+aantalwebpaginas = document.getElementById("aantal-webpaginas").value;
+aantalcmspaginas = document.getElementById("aantal-cms-paginas").value;
+aantalfeedbackronde = document.getElementById("aantal-feedbackrondes").value;
+
+if (aantalfeedbackronde == 0){
+	document.getElementById("website-feedbackronde").style.display = "none";
+}
+else {
+	document.getElementById("website-feedbackronde").style.display = "flex";
+}
+
+if (document.getElementById("cms-ja").checked == true){
+	document.getElementById("website-cms-totaal").style.display = "flex";
+	document.getElementById("cms-aantal-uur").style.display = "flex";
+}
+else {
+	document.getElementById("website-cms-totaal").style.display = "none";
+	document.getElementById("cms-aantal-uur").style.display = "none";
+}
+
+
+var devuurperpagina = 0;
+var designuurperpagina = 0;
+var cmstoggle = 0;
+var designtoggle = 0;
+
+
+if (document.getElementById("design-ja").checked == true){
+devuurperpagina = 4;
+designuurperpagina = 4;
+designtoggle = 1;
+}
+else {
+devuurperpagina = 4;
+designuurperpagina = 0;
+designtoggle = 0;
+}
+
+if (document.getElementById("cms-ja").checked == true){
+cmstoggle = 1;
+}
+else {
+cmstoggle = 0;
+}
+
+
+//datasetters
+document.getElementById("dev-uren").innerHTML = aantalwebpaginas * devuurperpagina;
+
+document.getElementById("design-uren").innerHTML = designtoggle * aantalwebpaginas * designuurperpagina;
+
+document.getElementById("webpagina-aantal").innerHTML = aantalwebpaginas + "x Web pagina";
+
+document.getElementById("webpaginas-prijs").innerHTML = aantalwebpaginas * (devuurperpagina+designuurperpagina) * 85;
+
+document.getElementById("webpaginas-uren").innerHTML = aantalwebpaginas * (devuurperpagina+designuurperpagina);
+
+document.getElementById("cms-paginas-aantal").innerHTML = cmstoggle * aantalcmspaginas + "x CMS pagina";
+
+document.getElementById("cms-paginas-prijs").innerHTML = cmstoggle * aantalcmspaginas * 4 * 85;
+
+document.getElementById("cms-paginas-uren").innerHTML = cmstoggle * aantalcmspaginas * 4;
+
+document.getElementById("feedbackronde-aantal").innerHTML = aantalfeedbackronde + "x Feedback ronde";
+
+document.getElementById("feedbackronde-prijs").innerHTML = aantalfeedbackronde * 85;
+
+
+
+	}, 1000);
+
+</script>

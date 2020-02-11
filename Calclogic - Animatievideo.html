@@ -1,0 +1,71 @@
+<script>
+
+
+setInterval(function() {
+
+	animatiemultiplier = document.getElementById("aantal-min-animatievideo").value
+
+	var promotieanimatie = 0;
+	var productanimatie = 0;
+	var explaineranimatie = 0;
+	var traileranimatie = 0;
+
+	var animatiescript = 0;
+
+	var typeanimatie = 0;
+
+	if (document.getElementById("animatie-promotievideo").checked == true){
+	 promotieanimatie = 1200;
+	 document.getElementById("animatievideo-promotie-totaal").style.display = "flex";
+	}
+	else {
+	 promotieanimatie = 0;
+	 document.getElementById("animatievideo-promotie-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("animatie-productvideo").checked == true){
+	  productanimatie = 1200;
+		 document.getElementById("animatievideo-product-totaal").style.display = "flex";
+	}
+	else {
+		productanimatie = 0;
+		document.getElementById("animatievideo-product-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("animatie-explainervideo").checked == true){
+	 explaineranimatie = 1200;
+	  document.getElementById("animatievideo-explainer-totaal").style.display = "flex";
+	}
+	else {
+	 explaineranimatie = 0;
+	 document.getElementById("animatievideo-explainer-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("animatie-trailervideo").checked == true){
+	 traileranimatie = 1200;
+		document.getElementById("animatievideo-trailer-totaal").style.display = "flex";
+	}
+	else {
+	 traileranimatie = 0;
+	 document.getElementById("animatievideo-trailer-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("animatie-script-door-websiteking").checked == true){
+	 animatiescript = 300;
+	}
+	else {
+	 animatiescript = 0;
+	}
+
+	if (document.getElementById("animatie-3d-video").checked == true){
+	 typeanimatie = 500;
+	}
+	else {
+	 typeanimatie = 0;
+	}
+
+	document.getElementById("animatie-totaal").innerHTML = ((promotieanimatie + productanimatie + explaineranimatie + traileranimatie) * animatiemultiplier) + animatiescript + typeanimatie;
+
+	}, 1000);
+
+</script>
