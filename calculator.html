@@ -1,8 +1,5 @@
 <script>
 
-//Zorgt ervoor dat wat gehide moet worden automatisch
-//gehide worden zodra de pagina laadt
-
 
 // Checkt welke diensten checkboxes er zijn aangevinkt
 // en laat het bijbehorende blok zien
@@ -123,13 +120,37 @@ document.getElementById('foto-video-block').onclick = function () {
 
   }
 
+</script>
+
+
+
+<script>
 
 setInterval(function() {
+
+
 
 //datapullers
 aantalwebpaginas = document.getElementById("aantal-webpaginas").value;
 aantalcmspaginas = document.getElementById("aantal-cms-paginas").value;
 aantalfeedbackronde = document.getElementById("aantal-feedbackrondes").value;
+
+if (aantalfeedbackronde == 0){
+	document.getElementById("website-feedbackronde").style.display = "none";
+}
+else {
+	document.getElementById("website-feedbackronde").style.display = "flex";
+}
+
+if (document.getElementById("cms-ja").checked == true){
+	document.getElementById("website-cms-totaal").style.display = "flex";
+	document.getElementById("cms-aantal-uur").style.display = "flex";
+}
+else {
+	document.getElementById("website-cms-totaal").style.display = "none";
+	document.getElementById("cms-aantal-uur").style.display = "none";
+}
+
 
 var devuurperpagina = 0;
 var designuurperpagina = 0;
@@ -181,6 +202,9 @@ document.getElementById("feedbackronde-prijs").innerHTML = aantalfeedbackronde *
 
 	}, 1000);
 
+</script>
+
+<script>
 
 setInterval(function() {
 
@@ -189,6 +213,14 @@ setInterval(function() {
 	document.getElementById("feedbackronde-aantal-branding").innerHTML = aantalfeedbackronde + "x Feedback ronde";
 
 	document.getElementById("feedbackronde-prijs-branding").innerHTML = aantalfeedbackronde * 85;
+
+	if (aantalfeedbackronde == 0){
+		document.getElementById("branding-feedbackronde").style.display = "none";
+	}
+	else {
+		document.getElementById("branding-feedbackronde").style.display = "flex";
+	}
+
 
 	var completebrandingprijs = 3500;
 	var logoprijs = 1100;
@@ -235,7 +267,7 @@ setInterval(function() {
 
 	if (document.getElementById("branding-briefpapier").checked == true){
 	 document.getElementById("briefpapier-prijs").innerHTML = briefpapierprijs;
-	 document.getElementById("branding-briefpapier-totaal").style.display = "flex;
+	 document.getElementById("branding-briefpapier-totaal").style.display = "flex";
 	}
 	else {
 		document.getElementById("briefpapier-prijs").innerHTML = 0;
@@ -254,62 +286,10 @@ setInterval(function() {
 
 	}, 1000);
 
+</script>
 
-setInterval(function() {
+<script>
 
-	var seoprijs = 500;
-	var googleadsprijs = 500;
-	var brochuresprijs = 600;
-	var influencermarketingprijs = 500;
-	var socialmediaadsprijs = 500;
-
-	if (document.getElementById("marketing-seo").checked == true){
-	 document.getElementById("seo-prijs").innerHTML = seoprijs;
-	 document.getElementById("seo-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("seo-prijs").innerHTML = 0;
-		document.getElementById("seo-totaal").style.display = "none";
-	}
-
-	if (document.getElementById("marketing-google-ads").checked == true){
-	 document.getElementById("googleads-prijs").innerHTML = googleadsprijs;
-	 document.getElementById("googleads-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("googleads-prijs").innerHTML = 0;
-		document.getElementById("googleads-totaal").style.display = "none";
-	}
-
-	if (document.getElementById("marketing-brochures").checked == true){
-	 document.getElementById("brochures-prijs").innerHTML = brochuresprijs;
-	 document.getElementById("brochures-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("brochures-prijs").innerHTML = 0;
-		document.getElementById("brochures-totaal").style.display = "none";
-	}
-
-	if (document.getElementById("marketing-influencer-marketing").checked == true){
-	 document.getElementById("influencermarketing-prijs").innerHTML = influencermarketingprijs;
-	 document.getElementById("influencer-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("influencermarketing-prijs").innerHTML = 0;
-		document.getElementById("influencer-totaal").style.display = "none";
-	}
-
-	if (document.getElementById("marketing-social-media-ads").checked == true){
-	 document.getElementById("socialmediaads-prijs").innerHTML = socialmediaadsprijs;
-	 document.getElementById("socialads-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("socialmediaads-prijs").innerHTML = 0;
-		document.getElementById("socialads-totaal").style.display = "none";
-	}
-
-
-	}, 1000);
 
 setInterval(function() {
 
@@ -349,6 +329,12 @@ setInterval(function() {
 	document.getElementById("fotos-totaal").innerHTML = (locatie + team + product) * fotomultiplier;
 
 	}, 1000);
+
+</script>
+
+
+<script>
+
 
 setInterval(function() {
 
@@ -407,6 +393,12 @@ setInterval(function() {
 	document.getElementById("videos-totaal").innerHTML = ((bedrijfsreportage + productvideo + promotievideo + explainervideo) * videomultiplier) + videoscript;
 
 	}, 1000);
+
+</script>
+
+
+<script>
+
 
 setInterval(function() {
 
@@ -475,6 +467,72 @@ setInterval(function() {
 
 	}, 1000);
 
+</script>
+
+<script>
+
+setInterval(function() {
+
+	var seoprijs = 500;
+	var googleadsprijs = 500;
+	var brochuresprijs = 600;
+	var influencermarketingprijs = 500;
+	var socialmediaadsprijs = 500;
+
+	if (document.getElementById("marketing-seo").checked == true){
+	 document.getElementById("seo-prijs").innerHTML = seoprijs;
+	 document.getElementById("seo-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("seo-prijs").innerHTML = 0;
+		document.getElementById("seo-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-google-ads").checked == true){
+	 document.getElementById("googleads-prijs").innerHTML = googleadsprijs;
+	 document.getElementById("googleads-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("googleads-prijs").innerHTML = 0;
+		document.getElementById("googleads-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-brochures").checked == true){
+	 document.getElementById("brochures-prijs").innerHTML = brochuresprijs;
+	 document.getElementById("brochures-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("brochures-prijs").innerHTML = 0;
+		document.getElementById("brochures-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-influencer-marketing").checked == true){
+	 document.getElementById("influencermarketing-prijs").innerHTML = influencermarketingprijs;
+	 document.getElementById("influencer-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("influencermarketing-prijs").innerHTML = 0;
+		document.getElementById("influencer-totaal").style.display = "none";
+	}
+
+	if (document.getElementById("marketing-social-media-ads").checked == true){
+	 document.getElementById("socialmediaads-prijs").innerHTML = socialmediaadsprijs;
+	 document.getElementById("socialads-totaal").style.display = "flex";
+	}
+	else {
+		document.getElementById("socialmediaads-prijs").innerHTML = 0;
+		document.getElementById("socialads-totaal").style.display = "none";
+	}
+
+
+	}, 1000);
+
+</script>
+
+
+<script>
+
+
 setInterval(function() {
 
 offertetotaal =
@@ -506,18 +564,3 @@ document.getElementById("offerte-totaal").value = offertetotaal;
 
 
 
-<script>
-
-
-
-setInterval(function() {
-
-offertetotaal =
-parseFloat(document.getElementById("videos-totaal").innerHTML) +
-parseFloat(document.getElementById("animatie-totaal").innerHTML);
-
-document.getElementById("offerte-totaalbedrag").innerHTML = offertetotaal;
-
-	}, 1000);
- 
- </script>
