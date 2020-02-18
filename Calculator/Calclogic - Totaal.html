@@ -1,30 +1,56 @@
 <script>
 
-
 setInterval(function() {
 
-offertetotaal =
-parseFloat(document.getElementById("webpaginas-prijs").innerHTML) +
-parseFloat(document.getElementById("cms-paginas-prijs").innerHTML) +
-parseFloat(document.getElementById("feedbackronde-prijs").innerHTML) +
-parseFloat(document.getElementById("completebranding-prijs").innerHTML) +
-parseFloat(document.getElementById("logo-prijs").innerHTML) +
-parseFloat(document.getElementById("huisstijl-prijs").innerHTML) +
-parseFloat(document.getElementById("copywriting-prijs").innerHTML) +
-parseFloat(document.getElementById("briefpapier-prijs").innerHTML) +
-parseFloat(document.getElementById("verpakkingen-prijs").innerHTML) +
-parseFloat(document.getElementById("feedbackronde-prijs-branding").innerHTML) +
-parseFloat(document.getElementById("fotos-totaal").innerHTML) +
-parseFloat(document.getElementById("videos-totaal").innerHTML) +
-parseFloat(document.getElementById("animatie-totaal").innerHTML) +
-parseFloat(document.getElementById("seo-prijs").innerHTML) +
-parseFloat(document.getElementById("googleads-prijs").innerHTML) +
-parseFloat(document.getElementById("brochures-prijs").innerHTML) +
-parseFloat(document.getElementById("influencermarketing-prijs").innerHTML) +
-parseFloat(document.getElementById("socialmediaads-prijs").innerHTML);
+  var offertetotaal = 0;
 
-document.getElementById("offerte-totaalbedrag").innerHTML = offertetotaal;
-document.getElementById("offerte-totaal").value = offertetotaal;
+  if (document.getElementById("check-opzoek-website").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("webpaginas-prijs").innerHTML) +
+    parseFloat(document.getElementById("cms-paginas-prijs").innerHTML) +
+    parseFloat(document.getElementById("feedbackronde-prijs").innerHTML);
+  }
+
+  if (document.getElementById("check-opzoek-branding").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("completebranding-prijs").innerHTML) +
+    parseFloat(document.getElementById("logo-prijs").innerHTML) +
+    parseFloat(document.getElementById("huisstijl-prijs").innerHTML) +
+    parseFloat(document.getElementById("copywriting-prijs").innerHTML) +
+    parseFloat(document.getElementById("briefpapier-prijs").innerHTML) +
+    parseFloat(document.getElementById("verpakkingen-prijs").innerHTML) +
+    parseFloat(document.getElementById("feedbackronde-prijs-branding").innerHTML);
+  }
+
+  if (document.getElementById("foto-video-fotoshoot").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("fotos-totaal").innerHTML);
+  }
+
+  if (document.getElementById("foto-video-videoshoot").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("videos-totaal").innerHTML);
+  }
+
+  if (document.getElementById("foto-video-animatie").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("animatie-totaal").innerHTML);
+  }
+
+
+  if (document.getElementById("check-opzoek-marketing").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("seo-prijs").innerHTML) +
+    parseFloat(document.getElementById("googleads-prijs").innerHTML) +
+    parseFloat(document.getElementById("brochures-prijs").innerHTML) +
+    parseFloat(document.getElementById("influencermarketing-prijs").innerHTML) +
+    parseFloat(document.getElementById("socialmediaads-prijs").innerHTML);
+  }
+
+
+ document.getElementById("offerte-totaalbedrag").innerHTML = offertetotaal;
+ document.getElementById("offerte-totaal").value = offertetotaal;
+
 
 	}, 1000);
 
