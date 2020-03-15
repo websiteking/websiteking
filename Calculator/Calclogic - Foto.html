@@ -36,6 +36,10 @@ setInterval(function() {
 	 document.getElementById("foto-product-totaal").style.display = "none";
 	}
 
+	document.getElementById("locatie-fotos-prijs").innerHTML = locatie * fotomultiplier;
+	document.getElementById("team-fotos-prijs").innerHTML = team * fotomultiplier;
+	document.getElementById("product-fotos-prijs").innerHTML = product * fotomultiplier;
+	
 	document.getElementById("fotos-totaal").innerHTML = (locatie + team + product) * fotomultiplier;
 
 	}, 1000);
