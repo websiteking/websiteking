@@ -63,6 +63,11 @@ setInterval(function() {
 	else {
 	 typeanimatie = 0;
 	}
+	
+	document.getElementById("promotievideo-animatie-prijs").innerHTML = promotieanimatie * videomultiplier;
+	document.getElementById("productvideo-animatie-prijs").innerHTML = productanimatie * videomultiplier;
+	document.getElementById("explainer-animatie-prijs").innerHTML = explaineranimatie * videomultiplier;
+	document.getElementById("trailervideo-animatie-prijs").innerHTML = traileranimatie * videomultiplier;
 
 	document.getElementById("animatie-totaal").innerHTML = ((promotieanimatie + productanimatie + explaineranimatie + traileranimatie) * animatiemultiplier) + animatiescript + typeanimatie;
 
