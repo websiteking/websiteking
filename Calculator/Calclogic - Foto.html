@@ -8,32 +8,44 @@ setInterval(function() {
 	var locatie = 0;
 	var team = 0;
 	var product = 0;
+	
+	var aantalfotos = document.getElementById("aantal-fotos");
+
+	var locatiefotoswitch = 0;
+	var teamfotoswitch = 0;
+	var productfotoswitch = 0;
 
 	if (document.getElementById("foto-locatie").checked == true){
 	 locatie = 200;
 	 document.getElementById("foto-locatie-totaal").style.display = "flex";
+	 locatiefotoswitch = 1;
 	}
 	else {
 	 locatie = 0;
 	 document.getElementById("foto-locatie-totaal").style.display = "none";
+	 locatiefotoswitch = 0;
 	}
 
 	if (document.getElementById("foto-team").checked == true){
 	  team = 200;
 		 document.getElementById("foto-team-totaal").style.display = "flex";
+		 teamfotoswitch = 1;
 	}
 	else {
 		team = 0;
 		document.getElementById("foto-team-totaal").style.display = "none";
+		teamfotoswitch = 0;
 	}
 
 	if (document.getElementById("foto-product").checked == true){
 	 product = 200;
 	  document.getElementById("foto-product-totaal").style.display = "flex";
+	  productfotoswitch = 1;
 	}
 	else {
 	 product = 0;
 	 document.getElementById("foto-product-totaal").style.display = "none";
+	 productfotoswitch = 0;
 	}
 
 	document.getElementById("locatie-fotos-prijs").innerHTML = locatie * fotomultiplier;
@@ -41,6 +53,12 @@ setInterval(function() {
 	document.getElementById("product-fotos-prijs").innerHTML = product * fotomultiplier;
 	
 	document.getElementById("fotos-totaal").innerHTML = (locatie + team + product) * fotomultiplier;
+	
+	
+
+	
+	document.getElementById("totaal-aantal-fotos").innerHTML = aantalfotos * 20 * (locatiefotoswitch + teamfotoswitch + productfotoswitch);
+	
 
 	}, 1000);
 
