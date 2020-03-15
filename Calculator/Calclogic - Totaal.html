@@ -27,6 +27,16 @@ setInterval(function() {
     parseFloat(document.getElementById("fotos-totaal").innerHTML);
   }
 
+  if (document.getElementById("foto-video-videoshoot").checked == true && document.getElementById("check-opzoek-foto-video").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("videos-totaal").innerHTML);
+  }
+
+  if (document.getElementById("foto-video-animatie").checked == true && document.getElementById("check-opzoek-foto-video").checked == true){
+    offertetotaal +=
+    parseFloat(document.getElementById("animatie-totaal").innerHTML);
+  }
+
 
   if (document.getElementById("check-opzoek-marketing").checked == true){
     offertetotaal +=
