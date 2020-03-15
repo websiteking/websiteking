@@ -54,6 +54,11 @@ setInterval(function() {
 	else {
 	 videoscript = 0;
 	}
+	
+	document.getElementById("bedrijfsreportage-prijs").innerHTML = bedrijfsreportage;
+	document.getElementById("productvideo-prijs").innerHTML = productvideo;
+	document.getElementById("promotievideo-prijs").innerHTML = promotievideo;
+	document.getElementById("explainervideo-prijs").innerHTML = explainervideo;
 
 	document.getElementById("videos-totaal").innerHTML = ((bedrijfsreportage + productvideo + promotievideo + explainervideo) * videomultiplier) + videoscript;
 
