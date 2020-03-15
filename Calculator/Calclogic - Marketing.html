@@ -4,7 +4,6 @@ setInterval(function() {
 
 	var seoprijs = 500;
 	var googleadsprijs = 500;
-	var brochuresprijs = 600;
 	var influencermarketingprijs = 500;
 	var socialmediaadsprijs = 500;
 
@@ -24,15 +23,6 @@ setInterval(function() {
 	else {
 		document.getElementById("googleads-prijs").innerHTML = 0;
 		document.getElementById("googleads-totaal").style.display = "none";
-	}
-
-	if (document.getElementById("marketing-brochures").checked == true){
-	 document.getElementById("brochures-prijs").innerHTML = brochuresprijs;
-	 document.getElementById("brochures-totaal").style.display = "flex";
-	}
-	else {
-		document.getElementById("brochures-prijs").innerHTML = 0;
-		document.getElementById("brochures-totaal").style.display = "none";
 	}
 
 	if (document.getElementById("marketing-influencer-marketing").checked == true){
@@ -56,7 +46,6 @@ setInterval(function() {
 	marketingtotaal =
 	parseFloat(document.getElementById("seo-prijs").innerHTML) +
 	parseFloat(document.getElementById("googleads-prijs").innerHTML) +
-	parseFloat(document.getElementById("brochures-prijs").innerHTML) +
 	parseFloat(document.getElementById("influencermarketing-prijs").innerHTML) +
 	parseFloat(document.getElementById("socialmediaads-prijs").innerHTML);
 	
