@@ -15,7 +15,7 @@ setInterval(function() {
 	var typeanimatie = 0;
 
 	if (document.getElementById("animatie-promotievideo").checked == true){
-	 promotieanimatie = 1200;
+	 promotieanimatie = 2000;
 	 document.getElementById("animatievideo-promotie-totaal").style.display = "flex";
 	}
 	else {
@@ -24,7 +24,7 @@ setInterval(function() {
 	}
 
 	if (document.getElementById("animatie-productvideo").checked == true){
-	  productanimatie = 1200;
+	  productanimatie = 2000;
 		 document.getElementById("animatievideo-product-totaal").style.display = "flex";
 	}
 	else {
@@ -33,7 +33,7 @@ setInterval(function() {
 	}
 
 	if (document.getElementById("animatie-explainervideo").checked == true){
-	 explaineranimatie = 1200;
+	 explaineranimatie = 2000;
 	  document.getElementById("animatievideo-explainer-totaal").style.display = "flex";
 	}
 	else {
@@ -42,7 +42,7 @@ setInterval(function() {
 	}
 
 	if (document.getElementById("animatie-trailervideo").checked == true){
-	 traileranimatie = 1200;
+	 traileranimatie = 2000;
 		document.getElementById("animatievideo-trailer-totaal").style.display = "flex";
 	}
 	else {
@@ -58,16 +58,16 @@ setInterval(function() {
 	}
 
 	if (document.getElementById("animatie-3d-video").checked == true){
-	 typeanimatie = 500;
+	 typeanimatie = 750;
 	}
 	else {
 	 typeanimatie = 0;
 	}
 	
-	document.getElementById("promotievideo-animatie-prijs").innerHTML = promotieanimatie * videomultiplier;
-	document.getElementById("productvideo-animatie-prijs").innerHTML = productanimatie * videomultiplier;
-	document.getElementById("explainer-animatie-prijs").innerHTML = explaineranimatie * videomultiplier;
-	document.getElementById("trailervideo-animatie-prijs").innerHTML = traileranimatie * videomultiplier;
+	document.getElementById("promotievideo-animatie-prijs").innerHTML = promotieanimatie * animatiemultiplier;
+	document.getElementById("productvideo-animatie-prijs").innerHTML = productanimatie * animatiemultiplier;
+	document.getElementById("explainer-animatie-prijs").innerHTML = explaineranimatie * animatiemultiplier;
+	document.getElementById("trailervideo-animatie-prijs").innerHTML = traileranimatie * animatiemultiplier;
 
 	document.getElementById("animatie-totaal").innerHTML = ((promotieanimatie + productanimatie + explaineranimatie + traileranimatie) * animatiemultiplier) + animatiescript + typeanimatie;
 
